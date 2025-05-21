@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body, html, #root {
+  height: 100%;
+  background-image: url("/FondoSport.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: black; /* fallback */
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.contenedor__todo {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  top: 200px;
+}
+
+.caja__trasera {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 90, 0, 0.5); 
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.caja__trasera div {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  transition: all 500ms;
+}
+
+.caja__trasera div h3 {
+  font-weight: 500;
+  font-size: 48px;
+}
+
+.caja__trasera div p {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.caja__trasera button {
+  padding: 10px 40px;
+  border: 2px solid #fff;
+  font-size: 20px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  transition: all 300ms;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.caja__trasera button:hover {
+  background: #fff;
+  color: #4caf50;
+}
+
+.contenedor__login-register {
+  width: 100%;
+  max-width: 400px;
+}
+
+.contenedor__login-register form {
+  width: 100%;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 80, 0, 0.3);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.contenedor__login-register form h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4caf50;
+}
+
+.contenedor__login-register form input,
+.contenedor__login-register form select {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 18px;
+  outline: none;
+  border-radius: 5px;
+  color: #333;
+}
+
+.contenedor__login-register form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+  border: none;
+  font-size: 20px;
+  background: #4caf50;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.contenedor__login-register form button:hover {
+  background-color: #43a047;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.imputs:focus {
+  outline: 1px solid #4caf50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Alternancia de formularios */
+.formulario__login {
+  display: block;
+  opacity: 1;
+}
+
+.formulario__register {
+  display: none;
+  opacity: 0;
+}
+
+.isRegistrando .formulario__login {
+  display: none;
+  opacity: 0;
+}
+
+.isRegistrando .formulario__register {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive tablets */
+@media (max-width: 1024px) {
+  .contenedor__todo {
+    flex-direction: column;
+    align-items: center;
+    top: 100px;
+  }
+
+  .caja__trasera {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .caja__trasera button {
+    margin-top: 15px;
+    padding: 10px 30px;
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  .contenedor__login-register {
+    max-width: 500px;
+    padding: 0 20px;
+  }
+}
+
+/* Responsive móviles */
+@media (max-width: 440px) {
+  .contenedor__todo {
+    flex-direction: column;
+    align-items: center;
+    top: 50px;
+    padding: 10px;
+  }
+
+  .caja__trasera {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .caja__trasera div h3 {
+    font-size: 24px;
+  }
+
+  .caja__trasera div p {
+    font-size: 16px;
+  }
+
+  .caja__trasera button {
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .contenedor__login-register form h2 {
+    font-size: 22px;
+  }
+
+  .contenedor__login-register form input,
+  .contenedor__login-register form button {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
